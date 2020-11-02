@@ -1,0 +1,17 @@
+-var pageTitle = "Dashboard"
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include pug/meta
+        include pug/links
+    body
+        .page  
+            include pug/sideBar
+            include pug/setting_side
+            .content_area.toggle
+                include pug/header
+                .container-fluid
+                    h1.pageTitle #{pageTitle}
+                    p.p_description.lead  this is a discription paragraph of #{pageTitle}
+
+        include pug/script

@@ -1,0 +1,57 @@
+.header
+    .toggle_sideBar
+        i.fas.fa-angle-double-left.fa-lg.rotate
+    .btn-group
+        i.far.fa-bell.fa-lg#btnGroupDrop1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        .dropdown-menu(aria-labelledby="btnGroupDrop1")
+            .drop_head
+                h5 notifications
+                span 5
+            a.dropdown-item(href="#") notif 1
+            a.dropdown-item(href="#") notif 2
+            a.dropdown-item(href="#") notif 3
+            a.dropdown-item(href="#") notif 4
+            .dropfoot
+                a(href="#") view more
+
+    .profil_dropdown
+        .btn-group
+            button#btnGroupDrop2.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button")
+                |hello abdEl
+            .dropdown-menu.personal(aria-labelledby="btnGroupDrop2")
+                .profil_head
+                    .img_profil
+                        img(src="img/1.jpg", alt="")
+                    .profil_name
+                        h3 abdEl krim
+                        span.lead premium membership
+                a(href="").dropdown-item Dropdown link
+                a(href="").dropdown-item Dropdown link
+                a(href="").dropdown-item Dropdown link
+                a(href="").dropdown-item Dropdown link
+                .profil_foot 
+                    .row
+                        .col
+                            .user
+                                i.far.fa-user.fa-lg
+                                span my profil
+                        .col
+                            .sliders
+                                i.fas.fa-sliders-h.fa-lg
+                                span setting
+                        .col
+                            .power-off
+                                i.fas.fa-power-off.fa-lg
+                                span logout
+
+
+
+//- <div class="btn-group" role="group">
+//-     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//-         |Dropdown     
+//-     </button>
+//-     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+//-         <a class="dropdown-item" href="#">Dropdown link</a>
+//-         <a class="dropdown-item" href="#">Dropdown link</a>
+//-     </div>
+//- </div>

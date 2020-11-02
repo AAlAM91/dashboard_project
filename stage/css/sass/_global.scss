@@ -1,0 +1,15 @@
+:root{
+    --mainColor : #161618;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+%timeTransition{
+    transition: all .4s ease-in-out;
+}

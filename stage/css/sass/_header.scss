@@ -1,0 +1,231 @@
+.content_area{
+    .header{
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+        padding:20px 40px;
+        .toggle_sideBar{
+            position: absolute;
+            left: -5px;
+            top: 10px;
+            height: 40px;
+            width: 40px;
+            background-color: #161618;
+            padding: 10px;
+            border-radius: 5px;
+            .fa-angle-double-left{
+                color: #fff;
+                @extend %timeTransition;
+                &.rotate{
+                    @extend %timeTransition;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .btn-group{
+            .fa-bell{
+                cursor: pointer;
+                background-color: #b6b7b9;
+                padding: 10px;
+                border-radius: 50%;
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+                @extend %timeTransition;
+                &:hover{
+                    color: #fff;
+                    background-color: var(--mainColor);
+                }
+            }
+            .dropdown-menu{
+                transform: none!important;
+                padding: 0!important;
+                top: 25px !important;
+                width: 350px;
+                left: 27px!important;
+                margin: 0!important;
+                border: none;
+                // border: 1px solid var(--mainColor);
+                border-radius: 0;
+                .drop_head{
+                    background-color: var(--mainColor);
+                    position: relative;
+                    color: #fff;
+                    padding: 10px 5px;
+                    text-transform: capitalize;
+                    margin-bottom: 5px;
+                    &::before {
+                        content: "";
+                        border-style: solid;
+                        border-width: 10px;
+                        border-color: transparent transparent var(--mainColor) transparent;
+                        position: absolute;
+                        top: -20px;
+                        left: 10px;
+                    }
+                    h5{
+                        display: inline-block;
+                        margin-bottom: 0;
+                    }
+                    span{
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: #9a0808;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                        border-radius: 50%;
+                    }
+                }
+                .dropdown-item{
+                    padding: 10px 25px;
+                    position: relative;
+                    margin-bottom: 3px;
+                    text-transform: capitalize;
+                    @extend %timeTransition;
+                    &::before {
+                        content: "";
+                        width: 2px;
+                        height: 100%;
+                        background-color: var(--mainColor);
+                        position: absolute;
+                        top: 0;
+                        left: 5px;
+                        @extend %timeTransition;
+                    }
+                    &:hover{padding: 10px 15px;}
+                    &:hover::before{
+                        width: calc(100% - 10px) ;
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+                .dropfoot{
+                    border-top: 1px solid var(--mainColor);
+                    padding: 10px 5px;
+                    text-align: center;
+                    @extend %timeTransition;
+                    &:hover{
+                        background-color: var(--mainColor);
+                    }
+                    &:hover a{
+                        color: #fff;
+                    }
+                    a{
+                        @extend %timeTransition;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+    }
+    .profil_dropdown{
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 300px;
+        transform: translateY(-50%);            
+        .btn-group{
+            width: 100%;
+            .btn{
+                background-color: #fff;
+                color: var(--mainColor);
+                text-transform: capitalize;
+                width: 100%;
+                border-radius: 0;
+                @extend %timeTransition;
+                &:focus{box-shadow: none;}
+                &:hover{
+                    background-color: var(--mainColor) ;
+                    color: #fff;
+                }
+            }
+            >.dropdown-menu{
+                &.personal{
+                    top: 60px !important;
+                    right: 0px!important;
+                    left: auto!important;
+                    width: 500px;
+                }
+                .profil_head{
+                    background-color: var(--mainColor);
+                    color: #fff;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    &::before{
+                        content: "";
+                        border-style: solid;
+                        border-width: 15px;
+                        border-color: transparent transparent var(--mainColor) transparent;
+                        position: absolute;
+                        right: 10px;
+                        top: -30px;
+                    }
+                    .profil_name{
+                        text-align: start;
+                        text-transform: capitalize;
+                        width: 60%;
+                    }
+                    .img_profil{
+                        text-align: center;
+                        display: inline-block;
+                        width: 40%;
+                        position: relative;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            padding: 2px;
+                            border: 1px solid #fff;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50% , -50%);
+                        }
+                    }
+                }
+            }
+            .profil_foot{
+                border-top: 1px solid var(--mainColor);
+                padding: 15px;
+                .user,.sliders,.power-off{
+                    border: 1px solid  rgba(22, 22, 24, 0.4);
+                    border-radius: 5px;
+                    padding: 10px;
+                    cursor: pointer;
+                    span{
+                        float: right;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        // @extend %timeTransition;
+                    }
+                    &:hover span{color: #fff;}
+                }
+                .user{
+                    i{color: #16a085;@extend %timeTransition;}
+                    &:hover i{color: #fff;}
+                    &:hover {background-color: #16a085;}
+                }
+                .sliders{
+                    i{color: #2980b9;@extend %timeTransition;}
+                    &:hover i{color: #fff;}
+                    &:hover {background-color: #2980b9;}
+                }
+                .power-off{
+                    i{color: #c0392b;@extend %timeTransition;}
+                    &:hover i{color: #fff;}
+                    &:hover {background-color: #c0392b;}
+                }
+            }
+        }
+    }
+
+}

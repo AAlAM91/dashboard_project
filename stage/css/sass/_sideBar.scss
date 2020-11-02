@@ -1,0 +1,101 @@
+.page{
+
+    .side_bar{
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #161618;
+        @extend %timeTransition;
+        &.toggle{
+            left: -250px;
+        }
+        .logo{
+            color: #fff;
+            text-align: center;
+            font-size: 35px;
+            text-transform: capitalize;
+            letter-spacing: -3px;
+            padding: 15px 0;
+        }
+        .linkMenu{
+            padding: 0 20px;
+            li{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: #ccc;
+                    padding: 12px 20px;
+                    display: block;
+                    text-transform: capitalize;
+                }
+                .slideLinks{
+                    position: relative;
+                    .fa-angle-right{
+                        float: right;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        @extend %timeTransition;
+                        &.down{
+                            @extend %timeTransition;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+            > li > a{
+                position: relative;
+                font-size: 16px;
+                @extend %timeTransition;
+                &::before{
+                    content: "";
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    border: 2px solid #ccc;
+                    border-radius: 50%;
+                    transform: translateY(-50%);
+                }
+                &:hover{
+                    padding-left: 25px;
+                    color: #fff;
+                }
+            }
+            .subMenu{
+                display: none;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 4px;
+                    height: 100%;
+                    position: absolute;
+                    background-color: #ccc;
+                    left: 10px;
+                    top: 0;
+                }
+                >li>a{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        width: 1px;
+                        height: 100%;
+                        position: absolute;
+                        background-color: #ccc;
+                        left: 10px;
+                        top: 0;
+                        @extend %timeTransition;
+                    }
+                    &:hover::before{
+                        background-color: rgba(22, 22, 24, 0.5);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

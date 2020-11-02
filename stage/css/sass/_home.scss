@@ -1,0 +1,40 @@
+.page{
+    .content_area{
+        width: calc(100% - 250px);
+        height: 100vh;
+        background-color: rgba(182, 183, 185, 0.412);
+        float: right;
+        @extend %timeTransition;
+        &.toggle{
+            width: 100%;
+        }
+        .toggle_sideBar{
+            cursor: pointer;
+        }
+        .pageTitle{
+            display: inline-block;
+            padding: 10px 5px;
+            position: relative;
+            &::before{
+                content: "";
+                width: 75%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: var(--mainColor);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            &::after{
+                content: "";
+                width: 55%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: var(--mainColor);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+            }
+        }
+    }
+}

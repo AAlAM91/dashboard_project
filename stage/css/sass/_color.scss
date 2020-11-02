@@ -1,0 +1,17 @@
+$colors:(
+    green_color :(color : #27ae60),
+    red_color   :(color : #c0392b),
+    blue_color  :(color : #3498db),
+    orange_color:(color : #d35400),
+    purpel_color:(color : #9b59b6)
+);
+@each $color , $map in $colors {
+    .#{$color}{
+        .page .content_area .pageTitle::after,
+        .page .content_area .pageTitle::before{
+            background-color: map-get($map: $map , $key: color);
+        }
+        .page .content_area .pageTitle{color: map-get($map: $map , $key: color)}
+    }
+
+}

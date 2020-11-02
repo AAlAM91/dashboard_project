@@ -1,0 +1,13 @@
+.setting_side
+    .setting_toggle
+        i.fas.fa-cog.fa-lg
+    .setting_box
+        h1 setting box
+        .color_option 
+            h3 color option 
+            ul.list-unstyled.color_list
+                -var colors = ["green_color", "red_color", "blue_color", "orange_color", "purpel_color"]
+                each color in colors
+                    li(data-color= color)
+        .font_option
+        .back_option

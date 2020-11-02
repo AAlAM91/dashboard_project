@@ -9,10 +9,23 @@
   "author": "abdEl Krim",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "static-server": "^2.2.1"
   },
   "dependencies": {
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions"
+  ]
 }
